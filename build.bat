@@ -1,5 +1,7 @@
 @echo off
 
+set EDK_TOOLS_BIN=%cd%\edk2\BaseTools\Bin\Win32
+
 set PYTHON_HOME=%cd%\python
 set PYTHONPATH=%cd%\python
 set PYTHON_COMMAND=%cd%\python\python.exe
