@@ -70,10 +70,7 @@ jobs:
         - run: .\setup.bat
 
         - name: Run build script
-          uses: ilammy/msvc-dev-cmd@v1
-          with:
-             arch: x86
+          shell: cmd
         - run: |
-            "%ProgramFiles%\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" -arch=x86
             "%ProgramFiles%\Microsoft Visual Studio\2022\Community\Enterprise\Tools\VsDevCmd.bat" -arch=x86
             .\build.bat
