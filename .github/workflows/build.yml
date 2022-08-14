@@ -23,15 +23,13 @@ jobs:
             fetch-depth: 2
             
         - name: Run setup script        
-        - shell: cmd
-        - uses: ilammy/msvc-dev-cmd@v1
-        - with:
+          uses: ilammy/msvc-dev-cmd@v1
+          with:
            arch: x86_64           
         - run: .\setup.bat
 
         - name: Run build script
-        - shell: cmd
-        - uses: ilammy/msvc-dev-cmd@v1
-        - with:
+          uses: ilammy/msvc-dev-cmd@v1
+          with:
              arch: x86_64           
         - run: .\build.bat
