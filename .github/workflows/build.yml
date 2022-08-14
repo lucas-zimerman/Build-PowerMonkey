@@ -25,8 +25,14 @@ jobs:
         - uses: ilammy/msvc-dev-cmd@v1
           with:
            arch: amd64_x86           
-        - name: Run setup script
-          run: .\setup.bat
+        - name: Run setup script        
+          shell: cmd
+          run: |
+          "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/VsDevCmd.bat" -arch=x86
+          .\setup.bat
 
         - name: Run build script
-          run: .\build.bat
+          shell: cmd
+          run: |
+          "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" -arch=x86
+          .\build.bat
