@@ -69,6 +69,12 @@ jobs:
            arch: x86
         - run: .\setup.bat
 
+        - name: Setup EDKII
+          shell: cmd
+          run : |
+            cd edk2
+            edksetup.bat Rebuild
+            
         - name: Run build script
           shell: cmd
           run: |
