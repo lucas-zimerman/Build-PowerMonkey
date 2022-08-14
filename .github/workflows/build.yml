@@ -66,11 +66,11 @@ jobs:
         - name: Run setup script        
           uses: ilammy/msvc-dev-cmd@v1
           with:
-           arch: x86_64           
+           arch: x86
         - run: .\setup.bat
 
         - name: Run build script
           uses: ilammy/msvc-dev-cmd@v1
           with:
-             arch: x86_64           
+             arch: x86
         - run: .\build.bat
