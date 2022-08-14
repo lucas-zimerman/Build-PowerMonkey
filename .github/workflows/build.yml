@@ -28,11 +28,11 @@ jobs:
         - name: Run setup script        
           shell: cmd
           run: |
-          "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/VsDevCmd.bat" -arch=x86
-          .\setup.bat
+            "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/VsDevCmd.bat" -arch=x86
+            .\setup.bat
 
         - name: Run build script
           shell: cmd
           run: |
-          "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" -arch=x86
-          .\build.bat
+            "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" -arch=x86
+            .\build.bat
