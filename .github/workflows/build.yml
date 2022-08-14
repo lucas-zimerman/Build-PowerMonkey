@@ -21,6 +21,10 @@ jobs:
           with:
             submodules: recursive
             fetch-depth: 2
+            
+        - name: Setup NASM
+          uses: ilammy/setup-nasm@v1
+            
         - name: Install Windows WDK
           run: |
             ################################################################################
