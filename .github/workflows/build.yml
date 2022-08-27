@@ -78,7 +78,13 @@ jobs:
           run : |
             cd edk2
             edksetup.bat Rebuild
-            
+
+        # Setup missing build action
+        - uses: BSFishy/pip-action@v1
+          with:
+            packages: |
+              build
+
         - name: Run build script
           shell: cmd
           run: |
