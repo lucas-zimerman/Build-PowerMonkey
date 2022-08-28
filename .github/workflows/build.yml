@@ -67,6 +67,11 @@ jobs:
 
             Invoke-PesterTests -TestFile "WDK"
 
+        - uses: egor-tensin/setup-cygwin@v3
+          with:
+            platform: x64
+            packages: cmake gcc-g++
+
         - name: Run setup script        
           uses: ilammy/msvc-dev-cmd@v1
           with:
