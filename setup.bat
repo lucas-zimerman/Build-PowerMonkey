@@ -27,6 +27,7 @@ REM Download Python
 curl https://www.python.org/ftp/python/3.10.0/python-3.10.0-embed-amd64.zip --output python.zip
 mkdir python
 tar -xf python.zip -C python
+set PATH=%cd%\python\Scripts;%PATH%
 echo Lib/site-packages> python\python310._pth
 echo python310.zip>> python\python310._pth
 echo .>> python\python310._pth
