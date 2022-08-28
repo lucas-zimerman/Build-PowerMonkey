@@ -7,7 +7,7 @@ set NASM_PREFIX=%cd%\nasm\
 
 copy /y CONFIGURATION.c edk2\MdeModulePkg\Application\PowerMonkeyApp
 cd edk2
-call build -m MdeModulePkg/Application/PowerMonkeyApp/PowerMonkey.inf
+..\python\Scripts\edk2_build.exe -m MdeModulePkg\Application\PowerMonkeyApp\PowerMonkey.inf
 copy /y Build\MdeModule\RELEASE_VS2019\X64\PowerMonkey.efi ..\EFI\Boot
 
 cd ..
