@@ -61,4 +61,5 @@ set NASM_PREFIX=%cd%\nasm\
 cd edk2
 python -m pip install -r pip-requirements.txt
 edksetup.bat Rebuild
+python BaseTools/Edk2ToolsBuild.py -t VS2019
 cd ..
