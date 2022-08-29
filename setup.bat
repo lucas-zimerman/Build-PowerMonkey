@@ -1,7 +1,6 @@
 set EDK_TOOLS_BIN=%cd%\edk2\BaseTools\Bin\Win32
 
 
-@echo off
 REM Download Edk2
 
 git clone https://github.com/tianocore/edk2.git
