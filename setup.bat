@@ -1,7 +1,6 @@
 set EDK_TOOLS_BIN=%cd%\edk2\BaseTools\Bin\Win32
 
 
-@echo off
 REM Download Edk2
 
 git clone https://github.com/tianocore/edk2.git
@@ -27,6 +26,7 @@ REM Download Python
 curl https://www.python.org/ftp/python/3.10.0/python-3.10.0-embed-amd64.zip --output python.zip
 mkdir python
 tar -xf python.zip -C python
+set PATH=%cd%\python\Scripts;%PATH%
 echo Lib/site-packages> python\python310._pth
 echo python310.zip>> python\python310._pth
 echo .>> python\python310._pth
@@ -60,4 +60,5 @@ set NASM_PREFIX=%cd%\nasm\
 cd edk2
 python -m pip install -r pip-requirements.txt
 edksetup.bat Rebuild
+python BaseTools/Edk2ToolsBuild.py -t VS2019
 cd ..
